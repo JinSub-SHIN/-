@@ -8,6 +8,8 @@ public class Exercise {
 
 	public static void main(String[] args) {
 
+		//https://programmers.co.kr/learn/courses/30/lessons/42862
+		
 		int n = 10;
 		int[] lost = {1, 2, 3, 5, 7, 9, 10};
 		int[] reserve = { 1, 2, 6, 7, 8 };		

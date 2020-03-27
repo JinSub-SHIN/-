@@ -3,6 +3,8 @@ package march;
 class Solution {
 	public String[] solution(int n, int[] arrayint1, int[] arrayint2) {
 
+		//https://programmers.co.kr/learn/courses/30/lessons/17681
+
 		String[] array = new String[n];
 		String[] array2 = new String[n];
 		String[] finalarray = new String[n];
