@@ -26,15 +26,15 @@ public class FailPercent {
 		for (int i = 0; i < stages.length; i++) {
 
 			int stage = stages[i];
-			Double num;
+			double num;
 
 			if (stage > N)
 				continue;
 
 			if (tmap.containsKey(stage)) {
-				num = tmap.get(stage) + 1.0;  // 해당맵에 스테이지가 있었다면 value +1
+				num = tmap.get(stage) + 1;  // 해당맵에 스테이지가 있었다면 value +1
 			} else {
-				num = 1.0; // 해당맵에 스테이지(key) 값이 없었다면 value = 1
+				num = 1; // 해당맵에 스테이지(key) 값이 없었다면 value = 1
 			}
 
 			tmap.put(stage, num);
@@ -47,8 +47,8 @@ public class FailPercent {
 
 			double num;
 
-			if (tmap.containsKey(i)) {
-				num = tmap.get(i) / total / (1.0);  // 실패율 
+			if (tmap.containsKey(i)) {	
+				num = tmap.get(i) / total;  // 실패율 
 				total = total - tmap.get(i); 
 			} else {
 				num = 0;
@@ -74,11 +74,11 @@ public class FailPercent {
 			그 메소드가 리턴한 값으로 소트한다.			
 		*/
 		
-		Collections.sort(keySetList, (o1, o2) -> (tmap.get(o2).compareTo(tmap.get(o1))));
+		Collections.sort(keySetList, (o1, o2) -> (tmap.get(o2).compareTo(tmap.get(o1)))); //내림차순
 		
 		for(int i=0 ; i<keySetList.size() ; i++) {
 			answer[i] = keySetList.get(i); // value로 정렬한 key값을 answer 배열에 대입
-			System.out.println(keySetList.get(i));
+			System.out.print(keySetList.get(i));
 		}
 		
 		//return answer;
